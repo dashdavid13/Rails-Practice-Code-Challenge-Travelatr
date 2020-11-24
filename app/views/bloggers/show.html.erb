@@ -1,0 +1,11 @@
+<h3> Blogger Page </h3>
+<%= @blogger.name %>
+
+<br>
+<%@blogger.posts.each do |post|%>
+    <li> Likes: <%=post.likes%> </li>
+<%end%>
+
+<br>
+
+<%= link_to 'Featured Post', post_path(@blogger.featured_post) %>
